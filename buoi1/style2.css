@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+}
+.child1{
+  background: #DAE8FC;
+  height: 700px;
+  padding: 20px;
+  width: 200px;
+}
+.child2{
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.child2 div{
+  padding: 20px;
+}
+.bg-color-1{
+  background-color: aqua;
+}
+.bg-color-2{
+  background-color: bisque;
+}
+.child3{
+  padding: 20px;
+  background-color: #D5E8D4;
+  height: 800px;
+  width: 200px;
+}
