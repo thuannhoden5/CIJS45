@@ -53,3 +53,4 @@ components.registerScreen = `
 </div>
 </div>
 `
+components.loginScreen = ``

@@ -22,6 +22,7 @@ view.setActiveScreen = (screenName) => {
           confirmPassword: registerForm.confirmPassword.value
         }
         console.log(data)
+        controller.register(data)
       })
     break;
   }
