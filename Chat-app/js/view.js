@@ -7,6 +7,21 @@ view.setActiveScreen = (screenName) => {
     break;
     case 'loginScreen' :
     // in ra man login
+      document.getElementById('app').innerHTML = components.loginScreen
+      document.getElementById('redirect-to-register')
+      .addEventListener('click', () => {
+        view.setActiveScreen('registerScreen')
+      })
+      const loginForm = document.getElementById('login-form')
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        loginForm.email.value = loginForm.email.value.trim()
+        const data = {
+          email: loginForm.email.value,
+          password: loginForm.password.value
+        }
+        controller.login(data)
+      })
     break;
     case 'registerScreen' :
       document.getElementById('app')
@@ -23,6 +38,10 @@ view.setActiveScreen = (screenName) => {
         }
         console.log(data)
         controller.register(data)
+      })
+      document.getElementById('redirect-to-login')
+      .addEventListener('click', () => {
+        view.setActiveScreen('loginScreen')
       })
     break;
   }

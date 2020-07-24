@@ -42,7 +42,7 @@ components.registerScreen = `
         id="confirm-password-error"></div>
     </div>
     <div class="form-action">
-      <span id="redirect-to-login">
+      <span class="cursor-pointer" id="redirect-to-login">
         Already have an account? Login
       </span>
       <button class="btn" type="submit">
@@ -53,4 +53,35 @@ components.registerScreen = `
 </div>
 </div>
 `
-components.loginScreen = ``
+components.loginScreen = `
+<div class="login-container">
+<div class="aside-right">
+  <div class="header">
+    <h3>MindX chat</h3>
+  </div>
+  <form id="login-form">
+    <div class="input-wrapper">
+      <input type="text" 
+        placeholder="Email" 
+        name="email">
+      <div class="error" id="email-error"></div>
+    </div>
+    <div class="input-wrapper">
+      <input type="password" 
+        placeholder="Password" 
+        name="password">
+      <div class="error" 
+        id="password-error"></div>
+    </div>
+    <div class="form-action">
+      <span class="cursor-pointer" id="redirect-to-register">
+        Don't have an account? Register
+      </span>
+      <button class="btn" type="submit">
+        Login
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+`
